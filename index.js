@@ -1,7 +1,10 @@
+// required installs stored in variables
 const fs = require('fs');
+const inquirer= require("inquirer");
+const generateMarkdown= require("generateMarkdown.js");
 
 // array of questions for user
-const questions = ([
+const questions = [
 
     // project title (this becomes title of README)
     {
@@ -30,13 +33,13 @@ const questions = ([
     {
         type: "list",
         name: "license",
-        message: "Which license would you like to use?"
-        choices: [""],
+        message: "Which license would you like to use?",
+        choices: ["Apache", "GNU General Public License v3.0", "MIT", "none"],
 
     },
     
 
-]);
+];
 
 // function to write README file
 function writeToFile(fileName, data) {
