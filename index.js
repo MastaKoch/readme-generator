@@ -110,7 +110,7 @@ function init() {
     inquirer
     .prompt(questions)
     .then(answers => {
-        writeToFile("README.MD", generateMarkdown(answers));
+        writeToFile("READMEdemo.MD", generateMarkdown(answers));
     });
 
 }
